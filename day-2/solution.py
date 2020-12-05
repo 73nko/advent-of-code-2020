@@ -15,7 +15,7 @@ def valid_passwords_part1(passwords):
     for line in passwords:
         if (line[0] <= line[3].count(line[2]) <= line[1]):
             valid_passwords_count += 1
-    return "Result puzzle 1: " + str(valid_passwords_count) + " valid passwords"
+    return "Result puzzle 1: " + str(valid_passwords_count)
 
 
 def valid_passwords_part2(passwords):
@@ -23,7 +23,7 @@ def valid_passwords_part2(passwords):
     for line in passwords:
         if (line[3][line[0]-1] == line[2]) != (line[3][line[1]-1] == line[2]):
             valid_passwords_count += 1
-    return "Result puzzle 2: " + str(valid_passwords_count) + " valid passwords"
+    return "Result puzzle 2: " + str(valid_passwords_count)
 
 
 passwords_list = parseInput('passwords.txt')
