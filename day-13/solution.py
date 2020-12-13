@@ -14,9 +14,7 @@ def process_input(input_line):
 
 
 with open("./day-13/notes.txt", 'r') as code_file:
-    earliest_dep = code_file.readline()
-    earliest_dep.rstrip()
-    earliest_dep = int(earliest_dep)
+    earliest_dep = int(code_file.readline())
     schedule = process_input(code_file.readline())
 
 bus_wait = [bus[0] - earliest_dep % bus[0] for bus in schedule]
